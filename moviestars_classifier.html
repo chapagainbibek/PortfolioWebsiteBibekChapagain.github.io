@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Stars Classifier</title>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="default.css">
+
+
+	<style type="text/css">
+		.img-container{
+			max-width: 600px;
+		}
+
+		img{
+			width: 100%
+		}
+
+	</style>
+
+</head>
+<body>
+	<div class="nav-wrapper">
+
+		
+		<a href="index.html">
+			<div class="dots-wrapper">
+				<div id="dot-1" class="browser-dot"></div>
+				<div id="dot-2" class="browser-dot"></div>
+				<div id="dot-3" class="browser-dot"></div>
+			</div>
+		</a>
+
+		<ul id="navigation">
+			<li><a target="_blank" href="https://github.com/bibekchapagain1/AttendanceProjectWithFaceRecognization"><b>Github</b></a></li>
+
+		</ul>
+	</div>
+
+	<div class="main-container">
+		<br>
+
+		<div class="img-container">
+			<img src="images/moviestars_classifier/cover.png">
+		</div>
+		
+
+		<h5><a target="_blank" href="https://github.com/bibekchapagain1/AttendanceProjectWithFaceRecognization"><b>Github Link</b></a></h5>
+		<h2>Movie Stars Classifier</h2>
+
+		<p>This project was mostly a learning process for me. I wanted to learn about classification in machine learning, so this project was very interesting and a great learning curve for me.
+		<br>
+		<br>
+		In this project i took some of the test data (pictures) of my favorite movie stars from South Indian Film Industry and i used OpenCV and Haar-Cascade detection technique to detect different facial features.
+		<br>
+		<br>
+		</p>
+
+		<h5>The Steps Involved:</h5>
+		<ul>
+			<li><b>1. Data collection:</b> <br>
+			-More than 100 pictures of the movie stars were scrapped from google and stored as test data.<br></li>
+			<br>
+			<li><b>2. Data Cleaning:</b> <br>
+			-After data collection, data cleaning was performed. The scrapped images contained various impurities. Those impurities were cleaned in this process mostly using face detection technique. After detecting faces, to make sure the images are clear and the person is visible we detected both the eyes, if both eyes are visible, images were kept otherwise discarded. For face detection, I used OpenCV and Haar-cascade detection technique.<br> <br>
+			Some of the techniques used:<br>
+			-For image with single person, if face and two eyes are visible which is detected using OpenCV we keep the image else we discard it.<br>
+			-For image with multiple person, if faces and eyes are clearly visible we performed manual verification.<br>
+			-For image in which face and two eyes are not visible it is discarded. <br>
+			</li>
+			<br>
+			<li><b>3. Feature Engineering:</b> <br>
+			-Wavelet Transform technique was used to extract facial features such as eyes, nose, lips, etc.<br></li>
+			<br>
+			<li><b>4. Making the prediction:</b> <br>
+			-Finally we can make the prediction by using SVM classifier which compares the wavelet transformed face with the faces from test images then finally gives us the name of predicted person as a result. <br></li>
+		</ul>
+
+
+
+		<h5>Project Result:</h5>
+		<p>Although the project is far from perfect, it was a great learning experience for me and it definetly gave me a great push towards my interest in field of machine learning.</p>
+		
+		<h6>Image processing</h6>
+		<div class="img-container">
+			<img src="images/moviestars_classifier/cover.png">
+		</div>
+		<br>
+		<h6>Original test image</h6>
+		<div class="img-container">
+			<img src="images/moviestars_classifier/saipallavi.jpg">
+		</div>
+		<br>
+		<h6>Wavelete image</h6>
+		<div class="img-container">
+			<img src="images/moviestars_classifier/Wavelete.JPG">
+		</div>
+		<br>
+		<h6>Prediction plot</h6>
+		<div class="img-container">
+			<img src="images/moviestars_classifier/seaborn.JPG">
+		</div>
+		<br>
+		<h6>UI</h6>
+		<div class="img-container">
+			<img src="images/moviestars_classifier/UI.JPG">
+		</div>
+		<br>
+
+	</div>
+
+</body>
+</html>

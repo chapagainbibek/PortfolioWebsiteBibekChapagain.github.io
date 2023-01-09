@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Attendance Project Using Face Recognization</title>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="default.css">
+
+
+	<style type="text/css">
+		.img-container{
+			max-width: 600px;
+		}
+
+		img{
+			width: 100%
+		}
+
+	</style>
+
+</head>
+<body>
+	<div class="nav-wrapper">
+
+		
+		<a href="index.html">
+			<div class="dots-wrapper">
+				<div id="dot-1" class="browser-dot"></div>
+				<div id="dot-2" class="browser-dot"></div>
+				<div id="dot-3" class="browser-dot"></div>
+			</div>
+		</a>
+
+		<ul id="navigation">
+			<li><a target="_blank" href="https://github.com/bibekchapagain1/AttendanceProjectWithFaceRecognization"><b>Github</b></a></li>
+
+		</ul>
+	</div>
+
+	<div class="main-container">
+		<br>
+
+		<div class="img-container">
+			<img src="images/face_detection_attendance/cover.png">
+		</div>
+		
+
+		<h5><a target="_blank" href="https://github.com/bibekchapagain1/AttendanceProjectWithFaceRecognization"><b>Github Link</b></a></h5>
+		<h2>Attendance Project Using Face Recognization</h2>
+
+		<p>This was a project I started back in September 2021 when I was teaching Computer Science in Kathmandu Pragya Kunja School. I started learning more about concept of object detection.
+		<br>
+		<br>
+		I started looking different tutorial videos regarding object detection, read different articles and blogs. I came accross a brilliant article by Adam Geitgey titled "Machine Learning is Fun! Part 4: Modern Face Recognition with Deep Learning". <a target="_blank" href="https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78">Link of article</a> 
+		<br>
+		<br>
+		In this article he explained how we can use Machine Learning and Deep Learning concepts to recognize a particular face.
+		<br>
+		</p>
+
+		<h5>The Steps Involved:</h5>
+		<ul>
+			<li><b>1. Finding all the faces:</b> <br>
+			-Histogram of oriented gradients (HOG) method is used to encode the images and extract different facial features then identify the faces in the image.</li>
+			
+			<li><b>2. Analyze the facial features:</b> <br>
+			-Deep Neural Network is trained to find 128 measurements in each faces. We provide some known faces to train the Neural Network withe the unknown faces as well. Then try to find 128 measurements in each faces.</li>
+
+			<li><b>3. Compare against the known faces:</b> <br>
+			-The measurements extracted from known faces are compared with the given unknown faces. We have to find the person in our database of known people who has the closest measurements to our test image.</li>
+
+			<li><b>4. Making the prediction:</b> <br>
+			-Finally we can make the prediction by using SVM classifier which gives us the name of predicted person as a result. <br></li>
+		</ul>
+
+
+		<h5></h5>
+		<p>
+			However the auther combined all these methods and created a python library call "Face recognization" which is used in this project to recognize different faces.
+		</p>
+
+		<h5>Project Result:</h5>
+		<p>In this attendance project, i used the face recognization technique to take attendance of my students during their computer science class. I stored their names and their attendance time as record in csv file. The result was mostly accurate.</p>
+		
+		<h6>Face recognization:</h6>
+		<div class="img-container">
+			<img src="images/face_detection_attendance/s1.png">
+		</div>
+
+		
+		<div class="img-container">
+			<img src="images/face_detection_attendance/s2.png">
+		</div>
+
+
+		<div class="img-container">
+			<img src="images/face_detection_attendance/s3.png">
+		</div>
+
+		<div class="img-container">
+			<img src="images/face_detection_attendance/s4.png">
+		</div>
+
+		
+		<h6>Attendance Record:</h6>
+		<div class="img-container">
+			<img src="images/face_detection_attendance/Attendance.JPG">
+		</div>
+
+	</div>
+
+</body>
+</html>
